@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("SKHub V.1.5 (Orion)","By sk_lvsmusic Tiktok")
+Tab:AddParagraph("SKHub V.1.5 (Orion) ©","By sk_lvsmusic Tiktok")
 Tab:AddButton({
 	Name = "My tiktok",
 	Callback = function()
