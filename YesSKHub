@@ -1,5 +1,5 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "SKHub Orion", HidePremium = false,IntroText = "SK Hub"})
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroIcon = "https://tr.rbxcdn.com/0dfda472df425bdb8bba804b3f83143e/420/420/Decal/Png", SaveConfig = true, ConfigFolder = "OrionTest"})
 OrionLib:MakeNotification({
 	Name = "SK Hub",
 	Content = "SK Hub is Loading...",
