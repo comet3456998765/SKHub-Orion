@@ -13,7 +13,7 @@ OrionLib:MakeNotification({
 	Time = 3
 })
 Wait(3)
-local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V8", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V9", SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("SKHub V8 (Orion) ©","By sk_lvsmusic Tiktok")
+Tab:AddParagraph("SKHub V9 (Orion) ©","By sk_lvsmusic Tiktok")
 Tab:AddButton({
 	Name = "My tiktok",
 	Callback = function()
@@ -78,6 +78,17 @@ Wait(2)
 OrionLib:Destroy()
   	end    
 })
+Tab:AddButton({
+	Name = "(New) Antiafk",
+	Callback = function()
+      		local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+  	end    
+})
 local Tab = Window:MakeTab({
 	Name = "Games",
 	Icon = "rbxassetid://4483345998",
@@ -119,7 +130,7 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
-	Name = "dex explorer",
+	Name = "(New)dex explorer",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/dex/main/dexscript"))()
   	end    
@@ -127,7 +138,6 @@ Tab:AddButton({
 local Section = Tab:AddSection({
 	Name = "Prison Life"
 })
-
 Tab:AddButton({
 	Name = "Septex Admin",
 	Callback = function()
