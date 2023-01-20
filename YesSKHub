@@ -13,7 +13,7 @@ OrionLib:MakeNotification({
 	Time = 3
 })
 Wait(3)
-local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V9", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V10", SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("SKHub V9 (Orion) ©","By sk_lvsmusic Tiktok")
+Tab:AddParagraph("SKHub V10 (Orion) ©","By sk_lvsmusic Tiktok")
 Tab:AddButton({
 	Name = "My tiktok",
 	Callback = function()
@@ -170,6 +170,12 @@ Tab:AddButton({
 })
 local Section = Tab:AddSection({
 	Name = "Others games"
+})
+Tab:AddButton({
+	Name = "(New) Steep steps",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/SteepSteps/main/Roblox2901"))()
+  	end    
 })
 Tab:AddButton({
 	Name = "TPS: Street Soccer",
