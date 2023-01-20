@@ -118,7 +118,12 @@ Tab:AddButton({
       		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Yield.txt"))()
   	end    
 })
-
+Tab:AddButton({
+	Name = "dex explorer",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/dex/main/dexscript"))()
+  	end    
+})
 local Section = Tab:AddSection({
 	Name = "Prison Life"
 })
@@ -157,7 +162,7 @@ local Section = Tab:AddSection({
 	Name = "Others games"
 })
 Tab:AddButton({
-	Name = "New TPS: Street Soccer",
+	Name = "TPS: Street Soccer",
 	Callback = function()
       		loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1323232234/My-Scripts/main/Street%20Soccer'))()
   	end    
