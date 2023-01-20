@@ -13,7 +13,7 @@ OrionLib:MakeNotification({
 	Time = 3
 })
 Wait(3)
-local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroIcon = "https://tr.rbxcdn.com/0dfda472df425bdb8bba804b3f83143e/420/420/Decal/Png", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V7", SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("SKHub V.1.5 (Orion) ©","By sk_lvsmusic Tiktok")
+Tab:AddParagraph("SKHub V7 (Orion) ©","By sk_lvsmusic Tiktok")
 Tab:AddButton({
 	Name = "My tiktok",
 	Callback = function()
@@ -49,6 +49,33 @@ Tab:AddButton({
         Image = "rbxassetid://4483345998",
         Time = 5
 })
+  	end    
+})
+Tab:AddButton({
+	Name = "Destroy Gui/Unload Gui",
+	Callback = function()
+      		OrionLib:MakeNotification({
+	Name = "destroy gui",
+	Content = "you are destroying the gui...",
+	Image = "rbxassetid://4483345998",
+	Time = 3
+})
+Wait(3)
+OrionLib:MakeNotification({
+	Name = "destroy gui",
+	Content = "you are destroying the gui..",
+	Image = "rbxassetid://4483345998",
+	Time = 3
+})
+Wait(3)
+OrionLib:MakeNotification({
+	Name = "destroy gui",
+	Content = "gui destroyed.",
+	Image = "rbxassetid://4483345998",
+	Time = 2
+})
+Wait(2)
+OrionLib:Destroy()
   	end    
 })
 local Tab = Window:MakeTab({
