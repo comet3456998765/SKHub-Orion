@@ -157,6 +157,12 @@ local Section = Tab:AddSection({
 	Name = "Others games"
 })
 Tab:AddButton({
+	Name = "New TPS: Street Soccer",
+	Callback = function()
+      		loadstring(game:HttpGet('https://raw.githubusercontent.com/hussain1323232234/My-Scripts/main/Street%20Soccer'))()
+  	end    
+})
+Tab:AddButton({
 	Name = "Strucid",
 	Callback = function()
       		loadstring(game:HttpGet'https://raw.githubusercontent.com/ao-0/methamphetamine-solutions/main/Loader.lua')("https://discord.gg/curPv7uhQc")
