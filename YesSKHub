@@ -13,7 +13,7 @@ OrionLib:MakeNotification({
 	Time = 3
 })
 Wait(3)
-local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V10", SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V11", SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("SKHub V10 (Orion) ©","By sk_lvsmusic Tiktok")
+Tab:AddParagraph("SKHub V11 (Orion) ©","By sk_lvsmusic Tiktok")
 Tab:AddButton({
 	Name = "My tiktok",
 	Callback = function()
@@ -150,6 +150,17 @@ Tab:AddButton({
       		loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/H17S32/Tiger_Admin/main/Script"))()
   	end    
 })
+Tab:AddButton({
+	Name = "Bang Gui",
+	Callback = function()
+      		loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/script-for-SKhb/main/script"))()
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
 Tab:AddButton({
 	Name = "Ymir Admin",
 	Callback = function()
