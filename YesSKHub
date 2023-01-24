@@ -38,7 +38,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Key"
 })
-Tab:AddParagraph("SKHub V15 (Orion) ©","please insert the key, if you do not have the key contact us on discord or if you are someone close to me use your private key are the first 3 letters or numbers of your name!,  Español: ¡Por favor inserte la clave, si no tienes la clave contacta con nosotros en Discord o si eres alguien cercano ami usa tu Clave privada son las primeras 4 letras o números de tu nombre!")
+Tab:AddParagraph("SKHub V16 (Orion) ©","please insert the key, if you do not have the key contact us on discord or if you are someone close to me use your private key are the first 3 letters or numbers of your name!,  Español: ¡Por favor inserte la clave, si no tienes la clave contacta con nosotros en Discord o si eres alguien cercano ami usa tu Clave privada son las primeras 4 letras o números de tu nombre!")
 Tab:AddButton({
 	Name = "Enter your key :v",
 	Callback = function()
