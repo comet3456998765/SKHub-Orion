@@ -1,9 +1,17 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local keys = {
-    "Chinese",
-	"brad",
-	"WADHASDWANDSAKKDSGOFOPEAFEOIDSIPOFESMWADWADSEFJDSJHKFKHDHKSKHFDSKJDSJHFSHKEFEUOADSIWAIDWADWASDWA",
-}
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion) Key system", HidePremium = false,IntroText = "SK Hub Key System",  SaveConfig = true, ConfigFolder = "OrionTest"})
+local keys = {} -- Tabla vacía para almacenar las claves generadas
+
+local function generateKey()
+    -- Generar una clave aleatoria de 20 caracteres
+    local key = ""
+    local characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    for i = 1, 20 do
+        key = key .. characters:sub(math.random(1, #characters), math.random(1, #characters))
+    end
+    table.insert(keys, key) -- Agregar la clave generada a la tabla de claves
+    return key
+end
 
 local function checkKey(key)
     for i, k in ipairs(keys) do
@@ -13,72 +21,43 @@ local function checkKey(key)
     end
     return false
 end
-
-OrionLib:MakeNotification({
-	Name = "SK Hub Key system",
-	Content = "SK Hub is Loading... (8 seg)",
-	Image = "rbxassetid://4483345998",
-	Time = 5
-})
-Wait(8)
-OrionLib:MakeNotification({
-	Name = "SK Hub Key system",
-	Content = "SK Hub is Ready! (6 seg)",
-	Image = "rbxassetid://4483345998",
-	Time = 4
-})
-Wait(6)
-local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub Key system",  SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Key system",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-
-local Section = Tab:AddSection({
-	Name = "Key"
-})
-Tab:AddParagraph("SKHub V16 (Orion) ©","please insert the key, if you do not have the key contact us on discord or if you are someone close to me use your private key are the first 3 letters or numbers of your name!,  Español: ¡Por favor inserte la clave, si no tienes la clave contacta con nosotros en Discord o si eres alguien cercano ami usa tu Clave privada son las primeras 4 letras o números de tu nombre!")
 Tab:AddButton({
-	Name = "Enter your key :v",
+	Name = "Generate Key",
 	Callback = function()
-		local key = Tab:AddTextbox({
-			Name = "Enter Key",
-			Default = "Enter Key Here",
-			TextDisappear = true,
-			Callback = function(Value)
-				if checkKey(Value) then
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
-				else
-				    Tab:AddParagraph("invalid key!","")
-					Tab:AddParagraph("you want to run the old version (Kavo lib)","")
-					Tab:AddButton({
-	Name = "Execute Old version",
-	Callback = function()
-	            loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/YesSKHUB/main/Main1"))()
-  	end    
+		local generatedKey = generateKey()
+		Tab:AddParagraph("Generated Key: " .. generatedKey)
+		Tab:AddParagraph("Please give this key to the user.")
+        Tab:AddButton({
+            Name = "Copy Key",
+            Callback = function()
+                      setclipboard(generatedKey)
+              end    
+        })
+	end
 })
-				end
-			end	  
-		})
-  	end    
+Tab:AddTextbox({
+	Name = "Enter Key",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		if checkKey(Value) then
+			Tab:AddParagraph("Key is valid! (wait 10 seconds)")
+			Wait("10")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
+		else
+			Tab:AddParagraph("Invalid key!")
+            Tab:AddParagraph("you want to run the old version does not have a key!")
+            Tab:AddButton({
+                Name = "Run old version",
+                Callback = function()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/YesSKHUB/main/Main1"))()
+                  end    
+            })
+		end	  
+	end
 })
-Tab:AddButton({
-	Name = "Join our Discord",
-	Callback = function()
-		local discordLink = "https://discord.gg/RUmphdv9Zr"
-		setclipboard(discordLink)
-		OrionLib:MakeNotification({
-			Name = "Discord",
-			Content = "Discord invite link has been copied to clipboard. Join us now!",
-			Image = "rbxassetid://4483345998",
-			Time = 5
-		})
-		spawn(function()
-			game:GetService("GuiService"):OpenBrowserWindow(discordLink)
-		end)
-  	end    
-})
-
-
-OrionLib:Init()
