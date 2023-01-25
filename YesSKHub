@@ -61,3 +61,5 @@ Tab:AddTextbox({
 		end	  
 	end
 })
+
+OrionLib:Init()
