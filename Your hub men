@@ -41,7 +41,7 @@ Tab:AddButton({
 	Name = "My Discord Server",
 	Callback = function()
       		
-        setclipboard("https://discord.gg/j9RGfjcYYg")
+        setclipboard("https://discord.gg/RUmphdv9Zr")
  
         OrionLib:MakeNotification({
         Name = "Join Discord",
@@ -130,7 +130,7 @@ Tab:AddButton({
   	end    
 })
 Tab:AddButton({
-	Name = "(New)dex explorer",
+	Name = "Dex explorer",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/dex/main/dexscript"))()
   	end    
@@ -184,7 +184,20 @@ local Section = Tab:AddSection({
 	Name = "Others games"
 })
 Tab:AddButton({
-	Name = "(New) Oaklands Ore esp",
+	Name = "(New) Legends Of Speed",
+	Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/other-script/main/script"))()
+  	end    
+})
+Tab:AddButton({
+	Name = "(New) Dinosaur Simulator",
+	Callback = function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Xcom911/DS/main/HoneyBadger'))()
+		print("Active")
+  	end    
+})
+Tab:AddButton({
+	Name = "Oaklands Ore esp",
 	Callback = function()
 		    loadstring(game:HttpGet("https://rawscripts.net/raw/Oaklands-Ore-esp-8480"))()
 	end
@@ -221,7 +234,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/mai
   	end    
 })
 Tab:AddButton({
-	Name = "Faded Silentaim",
+	Name = "Faded Silentaim (Da hood)",
 	Callback = function()
       		_G.HideToggle = "RightShift" -- You can put any keybind
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/FadedLock/main/YesEpic"))() 
@@ -342,13 +355,13 @@ local Section = Tab:AddSection({
 	Name = "Scripts"
 })
 Tab:AddButton({
-	Name = "(New) Universal fe",
+	Name = "Universal fe",
 	Callback = function()
 		    loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
   	end    
 })
 Tab:AddButton({
-	Name = "(New) Shadows Scripts",
+	Name = "(Shadows Scripts",
 	Callback = function()
 	        loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/other-script-V/main/loading%3Av"))()
   	end    
