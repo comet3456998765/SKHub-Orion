@@ -13,7 +13,7 @@ OrionLib:MakeNotification({
 	Time = 4
 })
 Wait(6)
-local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V17",  SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V18",  SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("SKHub V17 (Orion) ©","By sk_lvsmusic Tiktok")
+Tab:AddParagraph("SKHub V18 (Orion) ©","By sk_lvsmusic Tiktok")
 Tab:AddButton({
 	Name = "My tiktok",
 	Callback = function()
@@ -89,6 +89,7 @@ Wait(2)
 OrionLib:Destroy()
   	end    
 })
+Tab:AddParagraph("Changelog","(+) Added Changelog (+) Added New Key System 2.0 (+) Added Legends Of Speed script (+) Added Oaklands script")
 local Tab = Window:MakeTab({
 	Name = "Games",
 	Icon = "rbxassetid://4483345998",
