@@ -31,13 +31,8 @@ Tab:AddButton({
 	Callback = function()
 		local generatedKey = generateKey()
 		Tab:AddParagraph("Generated Key: " .. generatedKey)
-		Tab:AddParagraph("Please give this key to the user.")
-        Tab:AddButton({
-            Name = "Copy Key",
-            Callback = function()
-                      setclipboard(generatedKey)
-              end    
-        })
+		Tab:AddParagraph("Ya tienes copiada la key/You already have the key copied")
+		setclipboard(generatedKey)
 	end
 })
 Tab:AddTextbox({
