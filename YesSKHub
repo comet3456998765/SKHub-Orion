@@ -61,5 +61,14 @@ Tab:AddTextbox({
 		end	  
 	end
 })
+local Tab = Window:MakeTab({
+	Name = "Changelog",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local Section = Tab:AddSection({
+	Name = "Info"
+})
+Tab:AddParagraph("Changelog","(+) Added Changelog (+) Added New Key System 2.0 (+) Added Legends Of Speed script (+) Added Oaklands script")
 
 OrionLib:Init()
