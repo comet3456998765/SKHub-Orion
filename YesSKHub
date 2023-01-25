@@ -48,9 +48,16 @@ Tab:AddButton({
 			TextDisappear = true,
 			Callback = function(Value)
 				if checkKey(Value) then
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/"))()
 				else
-					Tab:AddParagraph("Invalid key!")
+				    Tab:AddParagraph("invalid key!","")
+					Tab:AddParagraph("you want to run the old version (Kavo lib)","")
+					Tab:AddButton({
+	Name = "Execute Old version",
+	Callback = function()
+	            loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/YesSKHUB/main/Main1"))()
+  	end    
+})
 				end
 			end	  
 		})
