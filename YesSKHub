@@ -31,8 +31,13 @@ Tab:AddButton({
 	Callback = function()
 		local generatedKey = generateKey()
 		Tab:AddParagraph("Generated Key: " .. generatedKey)
-		Tab:AddParagraph("Ya tienes copiada la key/You already have the key copied")
-		setclipboard(generatedKey)
+		Tab:AddParagraph("Please give this key to the user.")
+        Tab:AddButton({
+            Name = "Copy Key",
+            Callback = function()
+                      setclipboard(generatedKey)
+              end    
+        })
 	end
 })
 Tab:AddTextbox({
@@ -41,9 +46,9 @@ Tab:AddTextbox({
 	TextDisappear = true,
 	Callback = function(Value)
 		if checkKey(Value) then
-			Tab:AddParagraph("Key is valid! (wait 10 seconds)")
+			Tab:AddParagraph("Key is valid! (Updating!)")
 			Wait("10")
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
+            
 		else
 			Tab:AddParagraph("Invalid key!")
             Tab:AddParagraph("you want to run the old version does not have a key!")
@@ -64,6 +69,6 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("Changelog","(+) Added Changelog (+) Added New Key System 2.0 (+) Added Legends Of Speed script (+) Added Oaklands script")
+Tab:AddParagraph("Changelog","(+) admin for brookhaven")
 
 OrionLib:Init()
