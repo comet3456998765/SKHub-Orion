@@ -13,7 +13,7 @@ OrionLib:MakeNotification({
 	Time = 4
 })
 Wait(6)
-local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V20",  SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion)", HidePremium = false,IntroText = "SK Hub V21",  SaveConfig = true, ConfigFolder = "OrionTest"})
 local Tab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://4483345998",
@@ -23,7 +23,7 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("SKHub V20 (Orion) ©","By sk_lvsmusic Tiktok")
+Tab:AddParagraph("SKHub V21 (Orion) ©","By sk_lvsmusic Tiktok")
 Tab:AddButton({
 	Name = "My tiktok",
 	Callback = function()
@@ -50,6 +50,18 @@ Tab:AddButton({
         Time = 5
 })
   	end    
+})
+Tab:AddToggle({
+	Name = "Toggle gui whit M",
+	Default = true,
+	Keybind = Enum.KeyCode.M,
+	Callback = function(Value)
+		if Value then
+			print("Toggle is On")
+		else
+			print("Toggle is Off")
+		end
+	end
 })
 Tab:AddButton({
 	Name = "Antiafk",
@@ -89,7 +101,7 @@ Wait(2)
 OrionLib:Destroy()
   	end    
 })
-Tab:AddParagraph("Changelog","(+) Added Vynixus MM2 (+) Added Emergency Resonse Script")
+Tab:AddParagraph("Changelog","(+) Added toggle gui keyblind")
 local Tab = Window:MakeTab({
 	Name = "Games",
 	Icon = "rbxassetid://4483345998",
@@ -187,7 +199,7 @@ local Section = Tab:AddSection({
 Tab:AddButton({
 	Name = "Emergency Response Script",
 	Callback = function()
-		 loadstring(game:HttpGet("https://raw.githubusercontent.com/lobox920/Altraxs-Hub/main/Loader.lua", true))()
+		    loadstring(game:HttpGet("https://raw.githubusercontent.com/lobox920/Altraxs-Hub/main/Loader.lua", true))()
   	end    
 })
 Tab:AddButton({
