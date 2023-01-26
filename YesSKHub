@@ -1,59 +1,61 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion) Key system", HidePremium = false,IntroText = "SK Hub Key System",  SaveConfig = true, ConfigFolder = "OrionTest"})
-local keys = {} -- Tabla vacía para almacenar las claves generadas
+local Window = OrionLib:MakeWindow({Name = "SK Hub (Orion) Key system V3.0", HidePremium = false,IntroText = "SK Hub Key System V3.0", SaveConfig = true, ConfigFolder = "OrionTest"})
+local generatedKeys = {}
 
 local function generateKey()
-    -- Generar una clave aleatoria de 20 caracteres
-    local key = ""
-    local characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
-    for i = 1, 20 do
-        key = key .. characters:sub(math.random(1, #characters), math.random(1, #characters))
-    end
-    table.insert(keys, key) -- Agregar la clave generada a la tabla de claves
-    return key
+  math.randomseed(os.time())
+  local key = ""
+  for i = 1, 10 do
+    key = key .. math.random(0, 9)
+  end
+  table.insert(generatedKeys, key)
+  return key
 end
 
-local function checkKey(key)
-    for i, k in ipairs(keys) do
-        if key == k then
-            return true
-        end
-    end
-    return false
-end
 local Tab = Window:MakeTab({
 	Name = "Key system",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
+local Section = Tab:AddSection({
+	Name = "Please enter key"
+})
 Tab:AddButton({
 	Name = "Generate Key",
 	Callback = function()
-		local generatedKey = generateKey()
-		Tab:AddParagraph("Generated Key: " .. generatedKey)
-		Tab:AddParagraph("Ya tienes copiada la key/You already have the key copied")
-        setclipboard(generatedKey)
+    local key = generateKey()
+    print("Generated key: " .. key)
+    setclipboard(key)
+	Tab:AddLabel("Ya tienes la key copiada/You already have the key copied")
+  	end    
 })
 Tab:AddTextbox({
-	Name = "Enter Key",
+	Name = "Key",
 	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-		if checkKey(Value) then
-			Tab:AddParagraph("Key is valid! (wait 10 seconds)")
-			Wait("10")
-                        loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
+		local keyExists = false
+		for i,v in pairs(generatedKeys) do
+			if v == Value then
+				keyExists = true
+				break
+			end
+		end
+		if keyExists then
+			Tab:AddLabel("running sk hub (5 secs)")
+			wait("5")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
 		else
-			Tab:AddParagraph("Invalid key!")
-            Tab:AddParagraph("you want to run the old version does not have a key!")
-            Tab:AddButton({
-                Name = "Run old version",
-                Callback = function()
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/YesSKHUB/main/Main1"))()
-                  end    
-            })
-		end	  
-	end
+			Tab:AddLabel("Invalid Key")
+			Tab:AddLabel("You don't want to run the old version, it doesn't have a key")
+			Tab:AddButton({
+				Name = "Run old version",
+				Callback = function()
+					    loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/YesSKHUB/main/Main1"))()
+				  end    
+			})
+		end
+	end	  
 })
 local Tab = Window:MakeTab({
 	Name = "Changelog",
