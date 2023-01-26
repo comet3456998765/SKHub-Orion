@@ -44,6 +44,8 @@ Tab:AddTextbox({
 		if keyExists then
 			Tab:AddLabel("running World Hub!")
             loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/NewSkHub/main/World%20Hub"))()
+			wait("10")
+			OrionLib:Destroy()
 		else
 			Tab:AddLabel("Invalid Key")
 			Tab:AddLabel("You don't want to run the old version, it doesn't have a key")
@@ -51,6 +53,8 @@ Tab:AddTextbox({
 				Name = "Run old version",
 				Callback = function()
 					    loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/YesSKHUB/main/Main1"))()
+						wait("5")
+						OrionLib:Destroy()
 				  end    
 			})
 		end
