@@ -89,7 +89,7 @@ Wait(2)
 OrionLib:Destroy()
   	end    
 })
-Tab:AddParagraph("Changelog","(+) Added Admin for brookhaven")
+Tab:AddParagraph("Changelog"),("(+) Added MM2 script for mobiles")
 local Tab = Window:MakeTab({
 	Name = "Games",
 	Icon = "rbxassetid://4483345998",
@@ -185,7 +185,7 @@ local Section = Tab:AddSection({
 	Name = "Others games"
 })
 Tab:AddButton({
-	Name = "Admin for brookhaven",
+	Name = "Admin for brookhaven (Mobile and Pc)",
 	Callback = function()
 		    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
   	end    
@@ -346,6 +346,12 @@ Tab:AddButton({
 	Name = "Xeny ware (MM2)",
 	Callback = function()
       		loadstring(game:HttpGet("https://raw.githubusercontent.com/AdvancedWare/VScript/main/Script", true))()
+  	end    
+})
+Tab:AddButton({
+	Name = "MM2 Script (Mobiles)",
+	Callback = function()
+		    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Drifter0507/GUIS/main/MURDER%20MYSTERY%202", true))();
   	end    
 })
 Tab:AddButton({
