@@ -42,7 +42,7 @@ Tab:AddTextbox({
 		if checkKey(Value) then
 			Tab:AddParagraph("Key is valid! (wait 10 seconds)")
 			Wait("10")
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
 		else
 			Tab:AddParagraph("Invalid key!")
             Tab:AddParagraph("you want to run the old version does not have a key!")
