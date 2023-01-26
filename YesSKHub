@@ -42,8 +42,7 @@ Tab:AddTextbox({
 			end
 		end
 		if keyExists then
-			Tab:AddLabel("running sk hub (5 secs)")
-			wait("5")
+			Tab:AddLabel("running sk hub!")
             loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/SKHub-Orion/main/Your%20hub%20men"))()
 		else
 			Tab:AddLabel("Invalid Key")
