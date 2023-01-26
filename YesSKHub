@@ -65,6 +65,6 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("Changelog","(+) Added Admin for brookhaven Mobile")
+Tab:AddParagraph("Changelog","(+) Added MM2 script for mobiles")
 
 OrionLib:Init()
