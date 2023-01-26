@@ -89,7 +89,7 @@ Wait(2)
 OrionLib:Destroy()
   	end    
 })
-Tab:AddParagraph("Changelog"),("(+) added admin for brookhaven")
+Tab:AddParagraph("Changelog","(+) Added Admin for brookhaven")
 local Tab = Window:MakeTab({
 	Name = "Games",
 	Icon = "rbxassetid://4483345998",
