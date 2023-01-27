@@ -74,6 +74,6 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("Changelog","(+) Added IceHub")
+Tab:AddParagraph("Changelog","(+) Added Chat spy")
 
 OrionLib:Init()
