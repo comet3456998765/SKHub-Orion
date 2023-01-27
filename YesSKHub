@@ -74,6 +74,6 @@ local Tab = Window:MakeTab({
 local Section = Tab:AddSection({
 	Name = "Info"
 })
-Tab:AddParagraph("Changelog","(+) Added CMD-X")
+Tab:AddParagraph("Changelog","(+) Added Survive the killer Script (+) Added Chatbypasser")
 
 OrionLib:Init()
