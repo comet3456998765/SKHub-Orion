@@ -2,7 +2,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "Checking id", HidePremium = false,IntroText = "Net Hub Checking id", SaveConfig = true, ConfigFolder = "OrionTest"})
 local player = game.Players.LocalPlayer
 local whitelist = {3620776639,2313283831} -- Lista de IDs permitidas
-local blacklist = {4273722840,4281918792}
+local blacklist = {4273722840,4281918792} -- Lista de IDs no permitidas
 
 local Tab = Window:MakeTab({
 Name = "Checking",
