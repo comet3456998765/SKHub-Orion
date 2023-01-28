@@ -1,7 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Checking id", HidePremium = false,IntroText = "World Hub Checking id", SaveConfig = true, ConfigFolder = "OrionTest"})
 local player = game.Players.LocalPlayer
-local allowedIds = {3620776639,4273722840,4281918792} -- Lista de IDs permitidas
+local allowedIds = {3620776639,4273722840,4281918792,2313283831} -- Lista de IDs permitidas
 
 local Tab = Window:MakeTab({
 Name = "Checking",
@@ -14,7 +14,7 @@ Name = "Checking"
 Tab:AddButton({
 Name = "Check ID",
 Callback = function()
-if table.find(allowedIds, player.UserId, 1,2,3) then
+if table.find(allowedIds, player.UserId, 1,2,3,4) then
 Tab:AddLabel("Access granted. (3 sec for Owner (Version)")
 wait("3")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/World-Hub-for-owners/main/YesWorldHubOwners"))()
