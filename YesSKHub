@@ -1,1 +1,37 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Checking id", HidePremium = false,IntroText = "Net Hub Checking id", SaveConfig = true, ConfigFolder = "OrionTest"})
+local player = game.Players.LocalPlayer
+local whitelist = {3620776639} -- Lista de IDs permitidas
+local blacklist = {4273722840,4281918792} -- Lista de IDs no permitidas
 
+local Tab = Window:MakeTab({
+Name = "Checking",
+Icon = "rbxassetid://4483345998",
+PremiumOnly = false
+})
+local Section = Tab:AddSection({
+Name = "Checking"
+})
+Tab:AddButton({
+Name = "Check ID",
+Callback = function()
+if table.find(whitelist, player.UserId, 1) then
+Tab:AddLabel("Access granted. (3 sec for Owner (Version)")
+wait("3")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/World-Hub-for-owners/main/YesWorldHubOwners"))()
+wait("2")
+OrionLib:Destroy()
+else
+Tab:AddLabel("Access denied. (3 sec for key system)")
+wait("3")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/Key-system/main/YesKeysystem"))()
+end
+if table.find(blacklist, player.UserId, 1,2,3) then
+	Tab:AddLabel("Access denied. (3 sec for Blacklist (Version))")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/forblackedlist/main/Yesblacklisteds"))()
+	else
+
+end
+end
+})
+OrionLib:Init()
