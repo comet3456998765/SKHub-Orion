@@ -24,7 +24,7 @@ OrionLib:Destroy()
 else
 Tab:AddLabel("Access denied. (3 sec for key system)")
 wait("3")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/Key-system/main/YesKeysystem"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/Key-system/main/YesKeysystem.lua"))()
 end
 if table.find(blacklist, player.UserId, 1,2,3) then
 	Tab:AddLabel("Access denied. (3 sec for Blacklist (Version))")
