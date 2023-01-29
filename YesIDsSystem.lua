@@ -24,15 +24,16 @@ wait("2")
 OrionLib:Destroy()
 else
 print("no whitelist in owners version!")
+Tab:AddLabel("Estado/Condition")
+	Tab:AddLabel("Jugador no registrado en listas/Player not registered in lists")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/Key-system/main/YesKeysystem.lua"))()
 end
 if table.find(blacklist, player.UserId, 1) then
 	Tab:AddLabel("Estado/Condition")
 	Tab:AddLabel("Jugador no permitido/Player not allowed")
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/forblackedlist/main/Yesblacklisteds"))()
 	else
-	Tab:AddLabel("Estado/Condition")
-	Tab:AddLabel("Jugador no registrado en listas/Player not registered in lists")
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/Key-system/main/YesKeysystem.lua"))()
+
 end
 end
 })
