@@ -41,7 +41,7 @@ if table.find(whitelist, player.UserId, 1,2,3,4) then
 Tab:AddLabel("Estado/Condition")
 Tab:AddLabel("Jugador permitido/Allowed player (3 sec)")
 wait("3")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/World-Hub-for-owners/main/YesWorldHubOwners.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/World-Hub-for-owners/main/YesWorldHubOwner.lua"))()
 wait("2")
 OrionLib:Destroy()
 else
