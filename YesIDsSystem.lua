@@ -23,8 +23,8 @@ wait("4")
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Checking id", HidePremium = false,IntroText = "Net Hub Checking id", SaveConfig = true, ConfigFolder = "OrionTest"})
 local player = game.Players.LocalPlayer
-local whitelist = {3620776639,2313283831,4281918792,4273722840} -- Lista de IDs permitidas
-local blacklist = {1782259947} -- Lista de IDs no permitidas
+local whitelist = {3620776639,2313283831} -- Lista de IDs permitidas
+local blacklist = {1782259947,4281918792,4273722840} -- Lista de IDs no permitidas
 
 local Tab = Window:MakeTab({
 Name = "Checking",
