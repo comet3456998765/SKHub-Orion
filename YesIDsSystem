@@ -18,7 +18,7 @@ Callback = function()
 if table.find(whitelist, player.UserId, 1,2) then
 Tab:AddLabel("Access granted. (3 sec for Owner (Version)")
 wait("3")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/World-Hub-for-owners/main/YesWorldHubOwners"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/World-Hub-for-owners/main/YesWorldHubOwners.lua"))()
 wait("2")
 OrionLib:Destroy()
 else
