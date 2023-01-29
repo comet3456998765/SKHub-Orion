@@ -1,8 +1,8 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Checking id", HidePremium = false,IntroText = "Net Hub Checking id", SaveConfig = true, ConfigFolder = "OrionTest"})
 local player = game.Players.LocalPlayer
-local whitelist = {3620776639,2313283831} -- Lista de IDs permitidas
-local blacklist = {4273722840,4281918792,1782259947} -- Lista de IDs no permitidas
+local whitelist = {3620776639,2313283831,4281918792,4273722840} -- Lista de IDs permitidas
+local blacklist = {1782259947} -- Lista de IDs no permitidas
 
 local Tab = Window:MakeTab({
 Name = "Checking",
@@ -15,22 +15,24 @@ Name = "Checking"
 Tab:AddButton({
 Name = "Check ID",
 Callback = function()
-if table.find(whitelist, player.UserId, 1,2) then
-Tab:AddLabel("Access granted. (3 sec for Owner (Version)")
+if table.find(whitelist, player.UserId, 1,2,3,4) then
+Tab:AddLabel("Estado/Condition")
+Tab:AddLabel("Jugador permitido/Allowed player (3 sec)")
 wait("3")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/World-Hub-for-owners/main/YesWorldHubOwners.lua"))()
 wait("2")
 OrionLib:Destroy()
 else
-Tab:AddLabel("Access denied. (3 sec for key system)")
-wait("3")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/Key-system/main/YesKeysystem.lua"))()
+print("no whitelist in owners version!")
 end
-if table.find(blacklist, player.UserId, 1,2,3) then
-	Tab:AddLabel("Access denied. (3 sec for Blacklist (Version))")
+if table.find(blacklist, player.UserId, 1) then
+	Tab:AddLabel("Estado/Condition")
+	Tab:AddLabel("Jugador no permitido/Player not allowed")
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/forblackedlist/main/Yesblacklisteds"))()
 	else
-
+	Tab:AddLabel("Estado/Condition")
+	Tab:AddLabel("Jugador no registrado en listas/Player not registered in lists")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/comet3456998765/Key-system/main/YesKeysystem.lua"))()
 end
 end
 })
