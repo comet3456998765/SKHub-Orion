@@ -1,25 +1,3 @@
-local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/juywvm/ui-libs/main/Akali_Notify_Library/AkaliNotifyLibrary"))();
-
-local Notify = AkaliNotif.Notify;
-
-Notify({
-    Description = " Loading scripts ";
-    Title = " Loading IDs System ";
-    Duration = 5;
-});
-wait("6")
-Notify({
-    Description = " authenticating ";
-    Title = " authenticating wait 5 seconds ";
-    Duration = 3;
-});
-wait("5")
-Notify({
-    Description = " authenticated wait 5 seconds ";
-    Title = " authenticated wait 5 seconds ";
-    Duration = 2;
-});
-wait("4")
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Checking id", HidePremium = false,IntroText = "Net Hub Checking id", SaveConfig = true, ConfigFolder = "OrionTest"})
 local player = game.Players.LocalPlayer
